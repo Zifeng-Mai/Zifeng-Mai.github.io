@@ -24,7 +24,7 @@ author:
   avatar           : "pic.png"
   name             : "Zifeng Mai"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
+  bio              : "I'm an undergraduate student of Sun Yat-Sen University under the supervision of Prof. Chan-Dong Wang. My search interests focus on data mining, graph neural network and recommender system."
   location         : "Guangdong, China"
   employer         : "Sun Yat-Sen University"
   uri              : # URL
@@ -32,11 +32,11 @@ author:
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
-  impactstory      : # URL
-  orcid            : "http://orcid.org/yourorcidurl"
-  pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  researchgate     : # URL
+  googlescholar    : "https://scholar.google.com/citations?user=FhFsupIAAAAJ&hl=en"
+  # impactstory      : # URL
+  # orcid            : "http://orcid.org/yourorcidurl"
+  # pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
+  researchgate     : "https://www.researchgate.net/profile/Zi-Feng-Mai" # URL
 
   # Repositories and software development
   bitbucket        : # Username - Update with your username on the site
