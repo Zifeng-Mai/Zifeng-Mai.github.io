@@ -50,6 +50,45 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <!-- MathJax Configuration -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$'], ['\\(','\\)']],
+          displayMath: [['$$','$$'], ['\\[','\\]']],
+          processEscapes: true,
+          processEnvironments: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          TeX: {
+            equationNumbers: { 
+              autoNumber: "AMS",
+              useLabelIds: true
+            },
+            extensions: ["AMSmath.js", "AMSsymbols.js"]
+          }
+        }
+      });
+      
+      // 为所有块级公式自动编号
+      MathJax.Hub.Config({
+        TeX: {
+          equationNumbers: {
+            autoNumber: "all",
+            formatNumber: function (n) {return n},
+            formatTag: function (n) {return '('+n+')'},
+            formatID: function (n) {return 'eq:'+n},
+            formatURL: function (id) {return '#'+id},
+            useLabelIds: true
+          }
+        }
+      });
+    </script>
+    
+    <!-- MathJax CDN -->
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+
     <!-- ga & ba script hoook -->
     <script></script>
 </head>

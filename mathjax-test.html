@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MathJax 测试</title>
+    
+    <!-- MathJax Configuration -->
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [['$','$'], ['\\(','\\)']],
+          displayMath: [['$$','$$'], ['\\[','\\]']],
+          processEscapes: true,
+          processEnvironments: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          TeX: {
+            equationNumbers: { 
+              autoNumber: "AMS",
+              useLabelIds: true
+            },
+            extensions: ["AMSmath.js", "AMSsymbols.js"]
+          }
+        }
+      });
+      
+      // 为所有块级公式自动编号
+      MathJax.Hub.Config({
+        TeX: {
+          equationNumbers: {
+            autoNumber: "all",
+            formatNumber: function (n) {return n},
+            formatTag: function (n) {return '('+n+')'},
+            formatID: function (n) {return 'eq:'+n},
+            formatURL: function (id) {return '#'+id},
+            useLabelIds: true
+          }
+        }
+      });
+    </script>
+    
+    <!-- MathJax CDN -->
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+</head>
+<body>
+    <h1>MathJax 数学公式渲染测试</h1>
+    
+    <h2>行内公式测试</h2>
+    <p>这是一个行内公式：$E = mc^2$，它应该正确渲染。</p>
+    <p>另一个行内公式：$\theta \in \mathbb{R}^{n}$</p>
+    
+    <h2>块级公式测试</h2>
+    <p>这是一个块级公式：</p>
+    $$\begin{equation}
+    \hat{\theta}=\arg\min_{\theta\in\mathbb{R}^{n}}\mathcal{J}(\theta)
+    \end{equation}$$
+    
+    <p>梯度公式：</p>
+    $$\begin{equation}
+    \nabla_xf:=\left( \frac{\partial f}{\partial x_1},\frac{\partial f}{\partial x_2},\dots,\frac{\partial f}{\partial x_n} \right)\in\mathbb{R}^{n}
+    \end{equation}$$
+    
+    <h2>复杂公式测试</h2>
+    <p>矩阵运算：</p>
+    $$\begin{bmatrix}
+    1 & 2 \\
+    3 & 4
+    \end{bmatrix}$$
+    
+    <p>积分公式：</p>
+    $$\int_{-\infty}^{\infty} e^{-x^2} dx = \sqrt{\pi}$$
+</body>
+</html>
