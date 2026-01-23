@@ -1,0 +1,163 @@
+---
+layout: page
+title: Search
+permalink: /search/
+---
+
+<div class="container">
+    <div class="row">
+        <!-- 搜索内容区域 - 与侧边栏并列 -->
+        <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="搜索文章..." autocomplete="off">
+                    <i class="fa fa-search search-icon"></i>
+                </div>
+                
+                <div id="search-results" class="search-results">
+                    <div class="search-info">
+                        <p>输入关键词开始搜索</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 侧边栏区域 -->
+        <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 sidebar-container">
+            <!-- 侧边栏内容将由页面布局自动生成 -->
+        </div>
+    </div>
+</div>
+
+<style>
+.search-container {
+    margin-top: 60px;
+}
+
+.search-box {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+#search-input {
+    width: 100%;
+    padding: 15px 50px 15px 20px;
+    font-size: 18px;
+    border: 2px solid #e0e0e0;
+    border-radius: 30px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+#search-input:focus {
+    border-color: #0085a1;
+}
+
+.search-box .search-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 20px;
+}
+
+.search-results {
+    min-height: 200px;
+}
+
+.search-info {
+    text-align: center;
+    color: #999;
+    font-style: italic;
+    margin-top: 50px;
+}
+
+.search-result-item {
+    border-bottom: 1px solid #eee;
+    padding: 20px 0;
+    transition: background-color 0.3s ease;
+}
+
+.search-result-item:hover {
+    background-color: #f9f9f9;
+}
+
+.search-result-item h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.search-result-item h3 a {
+    color: #333;
+    text-decoration: none;
+}
+
+.search-result-item h3 a:hover {
+    color: #0085a1;
+}
+
+.search-result-meta {
+    color: #999;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.search-result-preview {
+    color: #666;
+    line-height: 1.6;
+}
+
+.search-result-tags {
+    margin-top: 10px;
+}
+
+.search-tag {
+    display: inline-block;
+    background-color: #f0f0f0;
+    color: #666;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+.highlight {
+    background-color: #fffacd;
+    padding: 2px 4px;
+    border-radius: 2px;
+}
+
+.no-results {
+    text-align: center;
+    color: #999;
+    font-style: italic;
+    margin-top: 50px;
+}
+
+/* 确保搜索内容区域与侧边栏不重叠 */
+@media (min-width: 992px) {
+    .search-container {
+        padding-right: 40px;
+    }
+    
+    .sidebar-container {
+        padding-left: 20px;
+        border-left: 1px solid #eee;
+    }
+}
+
+@media (max-width: 991px) {
+    .search-container {
+        margin-bottom: 30px;
+    }
+    
+    .sidebar-container {
+        margin-top: 40px;
+        padding-top: 30px;
+        border-top: 1px solid #eee;
+    }
+}
+</style>
+
+<script src="/js/search.js"></script>
