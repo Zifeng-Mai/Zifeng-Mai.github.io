@@ -41,6 +41,63 @@ $(document).ready(function() {
     $('iframe[src*="vimeo.com"]').addClass('embed-responsive-item');
 });
 
+// MathJax block formula horizontal scrolling support
+$(document).ready(function() {
+    // Function to wrap MathJax display formulas with scrollable container
+    function wrapMathJaxFormulas() {
+        // Wait for MathJax to finish rendering
+        if (typeof MathJax !== 'undefined') {
+            MathJax.Hub.Queue(function() {
+                // Wait a bit more to ensure MathJax is fully rendered
+                setTimeout(function() {
+                    // Find all MathJax display formulas
+                    $('.MathJax_Display').each(function() {
+                        var $mathDisplay = $(this);
+                        
+                        // Check if already wrapped
+                        if (!$mathDisplay.parent().hasClass('math-display-container')) {
+                            // Wrap the formula with scrollable container
+                            $mathDisplay.wrap('<div class="math-display-container"></div>');
+                            
+                            // Add scroll indicator for long formulas
+                            var container = $mathDisplay.parent();
+                            
+                            // Calculate widths after wrapping
+                            setTimeout(function() {
+                                var mathWidth = $mathDisplay.outerWidth(true);
+                                var containerWidth = container.width();
+                                
+                                if (mathWidth > containerWidth) {
+                                    container.addClass('has-scroll');
+                                }
+                            }, 100);
+                        }
+                    });
+                }, 500);
+            });
+        }
+    }
+    
+    // Initial wrap after page load
+    setTimeout(function() {
+        wrapMathJaxFormulas();
+    }, 1000);
+    
+    // Re-wrap on window resize
+    $(window).on('resize', function() {
+        wrapMathJaxFormulas();
+    });
+    
+    // Listen for MathJax typesetting complete
+    if (typeof MathJax !== 'undefined') {
+        MathJax.Hub.Register.MessageHook("End Process", function() {
+            setTimeout(function() {
+                wrapMathJaxFormulas();
+            }, 300);
+        });
+    }
+});
+
 // Navigation Scripts to Show Header on Scroll-Up
 jQuery(document).ready(function($) {
     var MQL = 1170;
