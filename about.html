@@ -1,7 +1,7 @@
 ---
 layout: page
-title: "About"
-description: "Hey, this is BY."
+title: "About Me"
+description: "Hello there."
 header-img: "img/post-bg-rwd.jpg"
 ---
 
@@ -51,17 +51,20 @@ header-img: "img/post-bg-rwd.jpg"
 
 <!-- Chinese Version -->
 <div class="zh post-container">
-    {% include about-zh.md %}
+    {% capture zh_content %}{% include about-zh.md %}{% endcapture %}
+    {{ zh_content | markdownify }}
 </div>
 
 <!-- English Version -->
 <div class="en post-container">
-    {% include about-en.md %}
+    {% capture en_content %}{% include about-en.md %}{% endcapture %}
+    {{ en_content | markdownify }}
 </div>
 
 <!-- Japanese Version -->
 <div class="ja post-container">
-    {% include about-ja.md %}
+    {% capture ja_content %}{% include about-ja.md %}{% endcapture %}
+    {{ ja_content | markdownify }}
 </div>
 
 <!-- Handle Language Change -->

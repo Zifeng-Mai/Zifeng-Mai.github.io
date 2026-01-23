@@ -1,19 +1,15 @@
-<blockquote><p>千里の道も一歩から<br>
-塵も積もれば山となる</p></blockquote>
+> 千里の道も一歩から  
+> 塵も積もれば山となる
 
-<p>こんにちは、私は<strong>柏荧(BY)</strong>と申します。iOSエンジニアとして廈門で働いています。</p>
+こんにちは、私は**柏荧(BY)**と申します。iOSエンジニアとして廈門で働いています。
 
-<p>仕事や勉強の合間に、フィットネスが好きで、ボクシングも大好きです。</p>
+仕事や勉強の合間に、フィットネスが好きで、ボクシングも大好きです。
 
-<p>これは私の個人ブログで、<a href="https://pages.github.com/">GitHub Pages</a>と<a href="http://jekyll.com.cn/">Jekyll</a>を使って作成しました。私のGitHubホームページは<a href="https://github.com/qiubaiying">👉GitHub·BY</a>、簡書ホームページは<a href="https://http://www.jianshu.com/u/e71990ada2fd">👉BY</a>です。何か質問があれば、ぜひご連絡ください〜</p>
+これは私の個人ブログで、[GitHub Pages](https://pages.github.com/)と[Jekyll](http://jekyll.com.cn/)を使って作成しました。私のGitHubホームページは[👉GitHub·BY](https://github.com/qiubaiying)、簡書ホームページは[👉BY](https://http://www.jianshu.com/u/e71990ada2fd)です。何か質問があれば、ぜひご連絡ください〜
 
-<p></p>
+#### Talks
 
-<h5>Talks</h5>
-
-<ul>
-    <li><a href="https://github.com">GitHub</a></li>
-    <li><a href="http://jekyll.com.cn/">jekyll</a></li>
-    <li><a href="http://huangxuan.me/">Hux</a></li> 
-    <li><a href="https://analytics.google.com/analytics">Google Analytics</a></li>
-</ul>
+- [GitHub](https://github.com)
+- [jekyll](http://jekyll.com.cn/)
+- [Hux](http://huangxuan.me/)
+- [Google Analytics](https://analytics.google.com/analytics)

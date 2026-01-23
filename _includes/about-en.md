@@ -1,17 +1,15 @@
-<blockquote><p>Yet another iOS Developer. <br>
-Yet another Life-long Student.</p></blockquote>
+> Yet another iOS Developer.  
+> Yet another Life-long Student.
 
-<p>Hi, I am <strong>Baiying Qiu</strong>，you can call me <strong>BY</strong>. I am an iOS software engineer and currently working in Xiamen</p>
+Hi, I am **Baiying Qiu**，you can call me **BY**. I am an iOS software engineer and currently working in Xiamen
 
-<p>This is my personal blog, through making Github Pages and Jekyll.My GitHub  👉 <a href="http://github.com/qiubaiying">Github·BY</a>.</p>
+This is my personal blog, through making Github Pages and Jekyll.My GitHub  👉 [Github·BY](http://github.com/qiubaiying).
 
-<p>I am a sports enthusiast, I like fitness, running and boxing.</p>
+I am a sports enthusiast, I like fitness, running and boxing.
 
-<h5>Talks</h5>
+#### Talks
 
-<ul>
-<li><a href="https://github.com">GitHub</a></li>
-<li><a href="http://jekyll.com.cn/">jekyll</a></li>
-<li><a href="https://pages.github.com/">GitHub Pages</a></li>
-<li><a href="https://qiubaiying.github.io">BY</a></li>
-</ul>
+- [GitHub](https://github.com)
+- [jekyll](http://jekyll.com.cn/)
+- [GitHub Pages](https://pages.github.com/)
+- [BY](https://qiubaiying.github.io)
