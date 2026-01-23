@@ -6,63 +6,71 @@ header-img: "img/post-bg-rwd.jpg"
 ---
 
 <!-- Language Selector -->
-<!-- <select class="sel-lang" onchange= "onLanChange(this.options[this.options.selectedIndex].value)">
-    <option value="0" selected> 中文 Chinese </option>
-    <option value="1"> 英文 English </option>
-</select> -->
+<style>
+.lang-selector {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.lang-btn {
+    padding: 8px 16px;
+    border: 1px solid #337ab7;
+    background-color: #fff;
+    color: #337ab7;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    min-width: 120px;
+}
+
+.lang-btn:hover {
+    background-color: #f8f9fa;
+    border-color: #23527c;
+    color: #23527c;
+}
+
+.lang-btn.active {
+    background-color: #337ab7;
+    color: #fff;
+    border-color: #337ab7;
+}
+
+.lang-btn.active:hover {
+    background-color: #23527c;
+    border-color: #23527c;
+}
+</style>
+<div class="lang-selector">
+    <button class="lang-btn active" data-lang="zh" onclick="onLanChange(0)">中文</button>
+    <button class="lang-btn" data-lang="en" onclick="onLanChange(1)">English</button>
+    <button class="lang-btn" data-lang="ja" onclick="onLanChange(2)">日本語</button>
+</div>
 
 <!-- Chinese Version -->
 <div class="zh post-container">
-
-    <!--copied from markdown -->
-    <blockquote><p>冰冻三尺 非一日之寒<br>
-    积土成山 非斯须之作</p></blockquote>
-
-    <p>Hey，我是<strong>柏荧(BY)</strong>，一只iOS程序猿，现在厦门工作。</p>
-
-    <p>工作、学习之余，我还是一个健身爱好者，同时也非常喜欢拳击。</p>
-
-    <p>这是我的利用 <a href="https://pages.github.com/">GitHub Pages</a> 与 <a href="http://jekyll.com.cn/">Jekyll</a> 搭建的 个人博客。我在GitHub主页<a href="https://github.com/qiubaiying">👉GitHub·BY</a> 与 简书主页<a href="https://http://www.jianshu.com/u/e71990ada2fd">👉BY</a>。如果有什么问题，欢迎提出探讨~</p>
-
-    <p></p>
-    
-    <h5>Talks</h5>
-
-    <ul>
-        <li><a href="https://github.com">GitHub</a></li>
-        <li><a href="http://jekyll.com.cn/">jekyll</a></li>
-        <li><a href="http://huangxuan.me/">Hux</a></li> 
-        <li><a href="https://analytics.google.com/analytics">Google Analytics</a></li>
-    </ul>
+    {% include about-zh.md %}
 </div>
 
 <!-- English Version -->
-<!-- <div class="en post-container">
-    <blockquote><p>Yet another iOS Developer. <br>
-    Yet another Life-long Student.</p></blockquote>
+<div class="en post-container">
+    {% include about-en.md %}
+</div>
 
-    <p>Hi, I am <strong>Baiying Qiu</strong>，you can call me <strong>BY</strong>. I am an iOS software engineer and currently working in Xiamen</p>
-
-    <p>This is my personal blog, through making Github Pages and Jekyll.My GitHub  👉 <a href="http://github.com/qiubaiying">Github·BY</a>.</p>
-    
-    <p>I am a sports enthusiast, I like fitness, running and boxing.</p>
-
-    <h5>Talks</h5>
-
-    <ul>
-    <li><a href="https://github.com">GitHub</a></li>
-    <li><a href="http://jekyll.com.cn/">jekyll</a></li>
-    <li><a href="https://pages.github.com/">GitHub Pages</a></li>
-    <li><a href="https://qiubaiying.github.io">BY</a></li>
-    </ul>
-</div> -->
+<!-- Japanese Version -->
+<div class="ja post-container">
+    {% include about-ja.md %}
+</div>
 
 <!-- Handle Language Change -->
 <script type="text/javascript">
     // get nodes
     var $zh = document.querySelector(".zh");
     var $en = document.querySelector(".en");
-    var $select = document.querySelector("select");
+    var $ja = document.querySelector(".ja");
+    var $langBtns = document.querySelectorAll(".lang-btn");
 
     // bind hashchange event
     window.addEventListener('hashchange', _render);
@@ -70,26 +78,50 @@ header-img: "img/post-bg-rwd.jpg"
     // handle render
     function _render(){
         var _hash = window.location.hash;
-        // en
+        // hide all language containers first
+        $zh.style.display = "none";
+        $en.style.display = "none";
+        $ja.style.display = "none";
+        
+        // update button active state
+        $langBtns.forEach(function(btn) {
+            btn.classList.remove('active');
+        });
+        
+        // show selected language and update button state
         if(_hash == "#en"){
-            $select.selectedIndex = 1;
             $en.style.display = "block";
-            $zh.style.display = "none";
-        // zh by default
+            $langBtns.forEach(function(btn) {
+                if (btn.getAttribute('data-lang') === 'en') {
+                    btn.classList.add('active');
+                }
+            });
+        }else if(_hash == "#ja"){
+            $ja.style.display = "block";
+            $langBtns.forEach(function(btn) {
+                if (btn.getAttribute('data-lang') === 'ja') {
+                    btn.classList.add('active');
+                }
+            });
         }else{
-            // not trigger onChange, otherwise cause a loop call.
-            $select.selectedIndex = 0;
+            // zh by default
             $zh.style.display = "block";
-            $en.style.display = "none";
+            $langBtns.forEach(function(btn) {
+                if (btn.getAttribute('data-lang') === 'zh') {
+                    btn.classList.add('active');
+                }
+            });
         }
     }
 
-    // handle select change
+    // handle language change
     function onLanChange(index){
         if(index == 0){
             window.location.hash = "#zh"
-        }else{
+        }else if(index == 1){
             window.location.hash = "#en"
+        }else{
+            window.location.hash = "#ja"
         }
     }
 
