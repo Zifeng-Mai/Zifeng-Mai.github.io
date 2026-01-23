@@ -89,6 +89,18 @@
                         </a>
                     </li>
                     {% endif %}
+                    {% if site.xiaohongshu_username %}
+                    <li class="xiaohongshu-container">
+                        <span class="fa-stack fa-lg xiaohongshu-btn">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa  fa-stack-1x fa-inverse">红</i>
+                        </span>
+                        <div class="xiaohongshu-popup">
+                            <img src="/img/xiaohongshu-qr.svg" alt="小红书二维码" class="xiaohongshu-qr">
+                            <p class="xiaohongshu-text">扫码关注我的小红书</p>
+                        </div>
+                    </li>
+                    {% endif %}
                 </ul>
                 <p class="copyright text-muted">
                     Copyright &copy; {{ site.title }} {{ site.time | date: '%Y' }}

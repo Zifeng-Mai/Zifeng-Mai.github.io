@@ -702,6 +702,59 @@ footer .copyright a:hover,
 footer .copyright a:focus {
   color: #0085a1;
 }
+
+/* 小红书按钮样式 */
+.xiaohongshu-container {
+  position: relative;
+  display: inline-block;
+}
+
+.xiaohongshu-btn {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.xiaohongshu-btn:hover {
+  color: #0085a1;
+}
+
+.xiaohongshu-popup {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  min-width: 180px;
+  text-align: center;
+}
+
+.xiaohongshu-container:hover .xiaohongshu-popup {
+  opacity: 1;
+  visibility: visible;
+  bottom: calc(100% + 10px);
+}
+
+.xiaohongshu-qr {
+  width: 120px;
+  height: 120px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.xiaohongshu-text {
+  font-size: 12px;
+  color: #666;
+  margin: 0;
+  font-weight: 500;
+}
 .floating-label-form-group {
   font-size: 14px;
   position: relative;

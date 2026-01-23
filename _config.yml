@@ -19,11 +19,12 @@ sidebar-avatar: /img/mutsumi.jpg      # use absolute URL, seeing it's used in bo
 # SNS settings
 RSS: false
 # weibo_username:     qiubaiying
-# zhihu_username:     qiubaiying
+zhihu_username:     zifeng-mai
 github_username:    Zifeng-Mai
 # facebook_username:  baiying.qiu.7
 # jianshu_username:   e71990ada2fd
 #twitter_username:   qiubaiying
+xiaohongshu_username: zifeng-mai
 
 
 
