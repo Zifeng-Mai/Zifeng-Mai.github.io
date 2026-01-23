@@ -704,21 +704,21 @@ footer .copyright a:focus {
 }
 
 /* 小红书按钮样式 */
-.xiaohongshu-container {
+footer .list-inline .xiaohongshu-container {
   position: relative;
   display: inline-block;
 }
 
-.xiaohongshu-btn {
+footer .list-inline .xiaohongshu-btn {
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
-.xiaohongshu-btn:hover {
+footer .list-inline .xiaohongshu-btn:hover {
   color: #0085a1;
 }
 
-.xiaohongshu-popup {
+footer .list-inline .xiaohongshu-popup {
   position: absolute;
   bottom: 100%;
   left: 50%;
@@ -726,34 +726,27 @@ footer .copyright a:focus {
   background: white;
   border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 15px;
+  padding: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   z-index: 1000;
   opacity: 0;
   visibility: hidden;
   transition: all 0.3s ease;
-  min-width: 180px;
-  text-align: center;
+  pointer-events: none;
 }
 
-.xiaohongshu-container:hover .xiaohongshu-popup {
+footer .list-inline .xiaohongshu-container:hover .xiaohongshu-popup {
   opacity: 1;
   visibility: visible;
-  bottom: calc(100% + 10px);
+  bottom: calc(100% + 15px);
+  pointer-events: auto;
 }
 
-.xiaohongshu-qr {
+footer .list-inline .xiaohongshu-qr {
   width: 120px;
   height: 120px;
-  margin-bottom: 10px;
   border-radius: 4px;
-}
-
-.xiaohongshu-text {
-  font-size: 12px;
-  color: #666;
-  margin: 0;
-  font-weight: 500;
+  display: block;
 }
 .floating-label-form-group {
   font-size: 14px;
