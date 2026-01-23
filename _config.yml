@@ -2,7 +2,10 @@
 title: AInon-Chihaya's Blog
 SEOTitle: 千早爱音的AI之家
 header-img: img/post-bg-desk.jpg
-email: 654147900@qq.com
+email:
+  - 654147900@qq.com
+  - maizf3@mail2.sysu.edu.cn
+  - maizifeng253@gmail.com
 description: "Every failure is leading towards success."
 keyword: "Math, Deep Learning, LLMs, Reinforcement Learning, Recommender, Search system"
 url: "https://zifeng-mai.github.io"          # your host, for absolute URL
