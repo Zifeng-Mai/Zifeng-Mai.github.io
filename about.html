@@ -51,20 +51,17 @@ header-img: "img/post-bg-rwd.jpg"
 
 <!-- Chinese Version -->
 <div class="zh post-container">
-    {% capture zh_content %}{% include about-zh.md %}{% endcapture %}
-    {{ zh_content | markdownify }}
+    {% include about-zh.html %}
 </div>
 
 <!-- English Version -->
 <div class="en post-container">
-    {% capture en_content %}{% include about-en.md %}{% endcapture %}
-    {{ en_content | markdownify }}
+    {% include about-en.html %}
 </div>
 
 <!-- Japanese Version -->
 <div class="ja post-container">
-    {% capture ja_content %}{% include about-ja.md %}{% endcapture %}
-    {{ ja_content | markdownify }}
+    {% include about-ja.html %}
 </div>
 
 <!-- Handle Language Change -->
@@ -148,7 +145,7 @@ header-img: "img/post-bg-rwd.jpg"
     owner: '{{site.gitalk.owner}}',
     admin: ['{{site.gitalk.admin}}'],
     distractionFreeMode: {{site.gitalk.distractionFreeMode}},
-    id: 'about',
+    id: 'about'
     });
     gitalk.render('gitalk-container');
 </script>
