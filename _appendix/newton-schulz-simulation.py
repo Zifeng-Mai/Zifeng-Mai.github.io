@@ -1,15 +1,10 @@
 """
-Newton-Schulz迭代方法模拟 - PyTorch版本
-
 这个脚本实现了基于Newton-Schulz迭代方法的矩阵求逆优化算法模拟。
 主要功能包括：
 1. 生成随机矩阵并计算其奇异值分布
 2. 定义基于Newton-Schulz迭代的目标函数
 3. 使用动量SGD优化算法参数
 4. 输出优化结果和性能指标
-
-作者: 基于JAX版本转换为PyTorch
-日期: 2026-01-25
 """
 
 import torch
