@@ -191,8 +191,8 @@
     "subtitle": "Muon",
     "tags": [
       "Optimizer",
-      "Machine Learning",
-      "Deep Learning",
+      "Kimi",
+      "Newton-Schulz",
       "Optimization Theory"
     ],
     "preview": "本文深入探讨了机器学习优化器的基本原理，从梯度下降开始，逐步深入以SGD和Adam为代表的现代机器学习优化器，展示了其理论基础和工程实践相结合的魅力。此外，本文从动力学的视角理解了某些优化器，可以为读者提供一些新的理解和启发。",
