@@ -6,7 +6,7 @@ author:     KuaiShou
 publication: Arxiv
 paper_url:  http://arxiv.org/abs/2601.02955
 date:       2026-01-01
-header-img: img/enoshima.jpg
+header-img: img/kamogawa.jpg
 preview:    将优化目标与AUC指标对齐、多目标之间相互对齐。1. 与AUC指标对齐的端到端排序优化：利用可微分排序直接端到端地优化多目标AUC总和，不需要使用间接的分类或回归的代理损失。2. 两阶段多目标集成范式：将原有的单步集成范式改进为两阶段的Align-and-Emsemble的新范式，显式建模不同目标（购买、评论、关注等）之间的共享排序能力。
 catalog: true
 tags:
