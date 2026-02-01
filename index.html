@@ -7,7 +7,11 @@ description: "Keep scaling and you will meet your aha moment."
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
         <h2 class="post-title">
-            {{ post.title }}
+            {% if post.layout == 'paper' %}
+                论文推荐：{{ post.title }}
+            {% else %}
+                {{ post.title }}
+            {% endif %}
         </h2>
         {% if post.subtitle %}
         <h3 class="post-subtitle">
