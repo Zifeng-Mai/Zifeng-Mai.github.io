@@ -15,20 +15,6 @@ tags:
     - AUC Optimization
 ---
 
-
-# HarmonRank: Ranking-aligned Multi-objective Ensemble for Live-streaming E-commerce Recommendation
-
-快手，2026.01
-
-http://arxiv.org/abs/2601.02955
-
-## TL;DR
-
-两个层级的对齐：与 AUC 指标对齐、多目标之间相互对齐
-
-1. 与 AUC 指标对齐的端到端排序优化：将不可微的 AUC 建模为 rank-sum 问题，并利用可微分排序 (differentiable ranking) 直接端到端地优化多目标 AUC 总和，不需要使用间接的分类或回归的代理损失。
-2. 两阶段多目标集成范式：将原有的单步集成范式改进为两阶段的 `Align-and-Emsemble` 的新范式，显式建模不同目标（购买、评论、关注等）之间的共享排序能力。
-
 ## 1. Motivation
 
 ![HarmonRank_motivation](/img/paper_imgs/HarmonRank_202601/HarmonRank_motivation.png)
