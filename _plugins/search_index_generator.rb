@@ -20,7 +20,7 @@ module Jekyll
           "preview" => post.data['preview'] || '',
           "url" => post.url,
           "date" => post.data['date'] ? post.data['date'].strftime('%Y-%m-%d') : '',
-          "author" => post.data['author'] || site.config['title']
+          "publication" => post.data['publication'] || '',
         }
         
         search_index << post_data

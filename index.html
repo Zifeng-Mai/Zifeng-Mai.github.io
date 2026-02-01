@@ -23,7 +23,11 @@ description: "Keep scaling and you will meet your aha moment."
         </div>
     </a>
     <p class="post-meta">
-        Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
+        {% if post.layout == 'paper' %}
+            Published by {{ post.author }} {% if post.publication == 'Arxiv' %} on Arxiv at {{ post.date | date: "%b. %Y" }}{% else %} on {{ post.publication }}{% endif %}
+        {% else %}
+            Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
+        {% endif %}
     </p>
 </div>
 <hr>
