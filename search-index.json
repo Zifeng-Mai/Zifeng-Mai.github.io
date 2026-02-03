@@ -82,6 +82,18 @@
     "publication": ""
   },
   {
+    "title": "通过拟合整个奖励分布进行强化学习",
+    "subtitle": "FlowRL: Matching Reward Distributions for LLM Reasoning",
+    "tags": [
+      "Reinforcement Learning",
+      "Distribution Matching"
+    ],
+    "preview": "现有的RL方法都以最大化奖励为目标，这种导向在复杂推理任务中极易容易导致模式崩溃：即模型反复收敛至单一的成功推理路径，从而忽略了其他潜在的更优解或多样化的解法。FlowRL将强化学习的优化逻辑从“最大化奖励”改为“匹配奖励分布”，模型不再仅仅追逐单一的高分答案，而是致力于学习所有有效推理路径的概率分布，从而实现了更高效的探索，克服了以往RL方法中可能存在的模式坍缩问题。",
+    "url": "/2025/11/04/FlowRL/",
+    "date": "2025-11-04",
+    "publication": "ICLR-2026"
+  },
+  {
     "title": "生成模型 (0)",
     "subtitle": "Overview of Deep Generative Modeling",
     "tags": [

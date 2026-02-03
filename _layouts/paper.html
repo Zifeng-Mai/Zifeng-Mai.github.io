@@ -40,7 +40,7 @@ layout: default
                     {% comment %} if page.subtitle {% endcomment %}
                     <h2 class="subheading">{{ page.subtitle }}</h2>
                     {% comment %} endif {% endcomment %}
-                    <span class="meta">Published by {% if page.author %}{{ page.author }}{% else %}{{ site.title }}{% endif %} {% if page.publication == 'Arxiv' %}on Arxiv at {{ page.date | date: "%b. %Y" }}{% else %}on {{ page.publication }}{% endif %}</span>
+                    <span class="meta">{% if page.author %}Published by {{ page.author }}{% else %}Published{% endif %} {% if page.publication == 'Arxiv' %}on Arxiv at {{ page.date | date: "%b. %Y" }}{% else %}on {{ page.publication }}{% endif %}</span>
                 </div>
             </div>
         </div>
@@ -61,11 +61,18 @@ layout: default
 				{{ content }}
 
                 <!-- 跳转原文按钮 -->
-                {% if page.paper_url %}
+                {% if page.paper_url or page.github_repo %}
                 <div class="paper-action">
+                    {% if page.paper_url %}
                     <a href="{{ page.paper_url }}" target="_blank" class="paper-link">
                         <i class="fa fa-external-link"></i> 阅读原文
                     </a>
+                    {% endif %}
+                    {% if page.github_repo %}
+                    <a href="{{ page.github_repo }}" target="_blank" class="paper-link" title="GitHub仓库">
+                        <i class="fa fa-github"></i>
+                    </a>
+                    {% endif %}
                 </div>
                 <style>
                     .paper-action {
@@ -78,12 +85,16 @@ layout: default
                         text-decoration: none;
                         font-size: 14px;
                         transition: all 0.3s ease;
+                        margin-right: 20px;
                     }
                     .paper-link:hover {
                         color: #2f3542;
                     }
                     .paper-link i {
                         margin-right: 5px;
+                    }
+                    .paper-link i.fa-github {
+                        font-size: 18px;
                     }
                 </style>
                 {% endif %}
