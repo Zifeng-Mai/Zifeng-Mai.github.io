@@ -15,6 +15,8 @@ tags:
     - AUC Optimization
 ---
 
+![HarmonRank_cover](/img/paper_imgs/HarmonRank_202601/HarmonRank_cover.png)
+
 ## 1. Motivation
 
 ![HarmonRank_motivation](/img/paper_imgs/HarmonRank_202601/HarmonRank_motivation.png)
@@ -105,4 +107,25 @@ $$
 2. Relation-agnostic Module：一步融分。使用一个 gating 模块来学习每个分数的权重。
 
 最终的精排分数就是两个模块的输出分数之和。
+
+## 3. Experiments
+
+### 3.1. 端到端指标
+
+<figure>
+  <img src="/img/paper_imgs/HarmonRank_202601/HarmonRank_offline.png" alt="两个随机变量之间的关系">
+  <figcaption>离线AUC</figcaption>
+</figure>
+
+<figure>
+  <img src="/img/paper_imgs/HarmonRank_202601/HarmonRank_online.png" alt="两个随机变量之间的关系">
+  <figcaption>线上A/B指标</figcaption>
+</figure>
+
+### 3.2. 不同业务指标之间的trade-off曲线
+
+可以看到，HarmonRank可以让各种业务指标都保持相对较高的水平。
+
+![HarmonRank_tradeoff](/img/paper_imgs/HarmonRank_202601/HarmonRank_tradeoff.png)
+
 
