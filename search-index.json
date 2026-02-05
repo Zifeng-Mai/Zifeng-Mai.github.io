@@ -251,5 +251,18 @@
     "url": "/2026/02/04/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B(1)/",
     "date": "2026-02-04",
     "publication": ""
+  },
+  {
+    "title": "随机过程(2)",
+    "subtitle": "相关函数及宽平稳假设",
+    "tags": [
+      "Stochastic Process",
+      "Auto Correlation Function",
+      "Wide State Stationary"
+    ],
+    "preview": "本文是张颢老师随机过程课程笔记的第二篇。本文主要介绍了随机过程以及相关函数的定义，并通过引入宽平稳假设，详细介绍了宽平稳随机过程的一些重要性质。",
+    "url": "/2026/02/05/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B(2)/",
+    "date": "2026-02-05",
+    "publication": ""
   }
 ]
