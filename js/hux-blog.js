@@ -139,3 +139,30 @@ jQuery(document).ready(function($) {
             });
     }
 });
+
+// Series Dropdown Toggle Function
+function toggleSeriesDropdown() {
+    var dropdown = document.querySelector('.series-dropdown');
+    if (dropdown) {
+        dropdown.classList.toggle('active');
+    }
+}
+
+// Close dropdown when clicking outside
+$(document).ready(function() {
+    $(document).on('click', function(e) {
+        var dropdown = $('.series-dropdown');
+        var header = $('.series-dropdown-header');
+        
+        // Check if click is outside the dropdown
+        if (!dropdown.is(e.target) && dropdown.has(e.target).length === 0) {
+            dropdown.removeClass('active');
+        }
+    });
+    
+    // Prevent dropdown from closing when clicking on the toggle button
+    $('.series-dropdown-toggle').on('click', function(e) {
+        e.stopPropagation();
+        toggleSeriesDropdown();
+    });
+});

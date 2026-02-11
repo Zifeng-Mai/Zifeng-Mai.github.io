@@ -58,7 +58,37 @@ layout: default
                 col-md-10 col-md-offset-1
                 post-container">
 
-				{{ content }}
+                <!-- Series Articles -->
+                {% if page.series %}
+                {% assign series_posts = site.posts | where: "series", page.series | sort: "date" %}
+                <div class="series-dropdown" id="series-articles">
+                    <div class="series-dropdown-header" onclick="toggleSeriesDropdown()">
+                        <div class="series-dropdown-title">
+                            <span class="series-icon">📚</span>
+                            <span>系列文章：{{ page.series }}</span>
+                            <span class="series-count">{{ series_posts.size }} 篇</span>
+                        </div>
+                        <button class="series-dropdown-toggle">
+                            <span class="dropdown-arrow">▼</span>
+                        </button>
+                    </div>
+                    <div class="series-dropdown-content">
+                        <ul class="series-list">
+                            {% for post in series_posts %}
+                                <li {% if post.url == page.url %}class="current-post-item"{% endif %}>
+                                    {% if post.url == page.url %}
+                                        <span class="current-post">{{ post.title }} {{ post.subtitle}}</span>
+                                    {% else %}
+                                        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }} {{ post.subtitle}}</a>
+                                    {% endif %}
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                {% endif %}
+
+			{{ content }}
 
                 <hr style="visibility: hidden;">
 
@@ -145,14 +175,14 @@ layout: default
                     <hr class="hidden-sm hidden-xs">
                     <h5><a href="/tags/">FEATURED TAGS</a></h5>
                     <div class="tags">
-        				{% for tag in site.tags %}
+						{% for tag in site.tags %}
                             {% if tag[1].size > site.featured-condition-size %}
 					<a href="/tags/#{{ tag[0] }}" title="{{ tag[0] }}" rel="{{ tag[1].size }}">
                                     {{ tag[0] }}
                                 </a>
                             {% endif %}
-        				{% endfor %}
-        			</div>
+						{% endfor %}
+					</div>
                 </section>
                 {% endif %}
 
