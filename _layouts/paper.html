@@ -77,9 +77,21 @@ layout: default
                             {% for post in series_posts %}
                                 <li {% if post.url == page.url %}class="current-post-item"{% endif %}>
                                     {% if post.url == page.url %}
-                                        <span class="current-post">{{ post.title }}</span>
+                                        <span class="current-post">
+                                            {% if post.layout == "paper" %}
+                                                {{ post.title }}
+                                            {% else %}
+                                                {{ post.title }} {{ post.subtitle | default: "" }}
+                                            {% endif %}
+                                        </span>
                                     {% else %}
-                                        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                                        <a href="{{ post.url | prepend: site.baseurl }}">
+                                            {% if post.layout == "paper" %}
+                                                {{ post.title }}
+                                            {% else %}
+                                                {{ post.title }} {{ post.subtitle | default: "" }}
+                                            {% endif %}
+                                        </a>
                                     {% endif %}
                                 </li>
                             {% endfor %}
