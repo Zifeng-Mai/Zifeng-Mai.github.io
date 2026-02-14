@@ -212,6 +212,20 @@
     "publication": "Arxiv"
   },
   {
+    "title": "多目标优化对齐",
+    "subtitle": "PROMISE: Process Reward Models Unlock Test-Time Scaling Laws in Generative Recommendations",
+    "tags": [
+      "Recommender System",
+      "Generative Recommendation",
+      "Process Reward Model",
+      "Semantic Drift"
+    ],
+    "preview": "利用PRM监督生成式推荐模型的中间解码步骤，并由此获得test-time scaling的能力，在推理阶段仅需增加少量计算量就能稳定提升性能。",
+    "url": "/2026/01/08/PROMISE/",
+    "date": "2026-01-08",
+    "publication": "Arxiv"
+  },
+  {
     "title": "优化器 (1)",
     "subtitle": "SGD和Adam",
     "tags": [
@@ -245,7 +259,8 @@
     "subtitle": "On the Entropy Dynamics in Reinforcement Fine-Tuning of Large Language Models",
     "tags": [
       "Reinforcement Learning",
-      "Policy Entropy"
+      "Policy Entropy",
+      "Entropy Safe"
     ],
     "preview": "本文从理论角度分析了RFT（Reinforcement Fine-Tuning）过程中经常出现的熵坍塌 (Entropy Collapse) 现象。作者构建了一个描述token级别熵变化的理论模型，通过推导单个Logit更新对策略熵的一阶影响，提出了熵判别器分数（Entropy Discriminator Score）的核心概念。理论表明，策略熵的变化方向由更新方向与的判别器分数的符号共同决定。基于此，文章解释了为何奖励高置信度的答案会导致探索能力丧失，并统一了现有多种熵控制方法的理论解释。最后，作者提出了两种梯度截断算法，在不引入额外超参的情况下，有效缓解了熵坍塌现象，显著提升了模型在数学推理任务中的探索能力。",
     "url": "/2026/02/03/%E7%86%B5%E5%8A%A8%E5%8A%9B%E5%AD%A6/",
