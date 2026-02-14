@@ -212,7 +212,7 @@
     "publication": "Arxiv"
   },
   {
-    "title": "多目标优化对齐",
+    "title": "利用PRM监督生成式推荐模型",
     "subtitle": "PROMISE: Process Reward Models Unlock Test-Time Scaling Laws in Generative Recommendations",
     "tags": [
       "Recommender System",
