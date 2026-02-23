@@ -342,5 +342,19 @@
     "url": "/2026/02/10/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B(5)/",
     "date": "2026-02-10",
     "publication": ""
+  },
+  {
+    "title": "随机过程(6)",
+    "subtitle": "高斯过程(2): 多元高斯分布和DDPM",
+    "tags": [
+      "Stochastic Process",
+      "Gaussian Process",
+      "Gaussian Distribution",
+      "Denoising Diffusion Probabilistic Model"
+    ],
+    "preview": "本文是张颢老师随机过程课程笔记的第六篇。在本文中，我们主要介绍了多元高斯分布的一些基本性质，包括其概率密度函数、特征函数和线性性。根据线性性，我们探讨了边缘分布的高斯性与联合分布的高斯性之间的关系。最后，我们介绍了DDPM模型，这是高斯过程的一个非常典型的应用，它在图像生成等任务中发挥了重要作用。",
+    "url": "/2026/02/24/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B(6)/",
+    "date": "2026-02-24",
+    "publication": ""
   }
 ]
