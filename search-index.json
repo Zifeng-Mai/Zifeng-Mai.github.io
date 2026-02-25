@@ -345,16 +345,29 @@
   },
   {
     "title": "随机过程(6)",
-    "subtitle": "高斯过程(2): 多元高斯分布和DDPM",
+    "subtitle": "高斯过程(2): 多元高斯分布",
     "tags": [
       "Stochastic Process",
       "Gaussian Process",
       "Gaussian Distribution",
       "Denoising Diffusion Probabilistic Model"
     ],
-    "preview": "本文是张颢老师随机过程课程笔记的第六篇。在本文中，我们主要介绍了多元高斯分布的一些基本性质，包括其概率密度函数、特征函数和线性性。根据线性性，我们探讨了边缘分布的高斯性与联合分布的高斯性之间的关系。最后，我们介绍了DDPM模型，这是高斯过程的一个非常典型的应用，它在图像生成等任务中发挥了重要作用。",
+    "preview": "本文是张颢老师随机过程课程笔记的第六篇。在本文中，我们深入介绍了多元高斯分布的一些基本性质，包括其概率密度函数、特征函数和线性性。根据线性性，我们探讨了边缘分布的高斯性与联合分布的高斯性之间的关系。",
     "url": "/2026/02/24/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B(6)/",
     "date": "2026-02-24",
+    "publication": ""
+  },
+  {
+    "title": "随机过程(7)",
+    "subtitle": "高斯过程的应用",
+    "tags": [
+      "Stochastic Process",
+      "Gaussian Process",
+      "Denoising Diffusion Probabilistic Model"
+    ],
+    "preview": "本文是张颢老师随机过程课程笔记的第七篇。在本文中，我们介绍了DDPM模型，这是高斯过程的一个非常典型的应用，我们详细推导了DDPM的前向过程和后向过程，从中展示了处理高斯分布的一些重要的通用技巧。",
+    "url": "/2026/02/25/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B(7)/",
+    "date": "2026-02-25",
     "publication": ""
   }
 ]
