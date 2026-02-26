@@ -286,7 +286,7 @@
     async("{{ '/js/jquery.nav.js' | prepend: site.baseurl }}", function () {
         $('.catalog-body').onePageNav({
             currentClass: "active",
-            changeHash: !1,
+            changeHash: true,
             easing: "swing",
             filter: "",
             scrollSpeed: 700,
