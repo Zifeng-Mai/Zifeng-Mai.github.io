@@ -1,5 +1,19 @@
 [
   {
+    "title": "利用PRM监督生成式推荐模型",
+    "subtitle": "RankMixer: Scaling Up Ranking Models in Industrial Recommenders",
+    "tags": [
+      "Recommender System",
+      "Generative Recommendation",
+      "Process Reward Model",
+      "Semantic Drift"
+    ],
+    "preview": "利用PRM监督生成式推荐模型的中间解码步骤，并由此获得test-time scaling的能力，在推理阶段仅需增加少量计算量就能稳定提升性能。",
+    "url": "/2025/07/26/RankMixer/",
+    "date": "2025-07-26",
+    "publication": "Arxiv"
+  },
+  {
     "title": "强化学习基础 (1)",
     "subtitle": "多臂赌博机",
     "tags": [
@@ -383,6 +397,17 @@
     "preview": "在本文中，我们主要介绍了高斯过程的一些应用，作为习题课来增强读者对于高斯分布的理解。其中的内容包括：DDPM、线性高斯系统、条件高斯分布的一些计算等。",
     "url": "/2026/02/25/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B(7)/",
     "date": "2026-02-25",
+    "publication": ""
+  },
+  {
+    "title": "等周不等式",
+    "subtitle": "周长为定值时，面积最大的封闭图形是圆",
+    "tags": [
+      "Isoperimetric Inequality"
+    ],
+    "preview": "在本文中，我们主要介绍了高斯过程的一些应用，作为习题课来增强读者对于高斯分布的理解。其中的内容包括：DDPM、线性高斯系统、条件高斯分布的一些计算等。",
+    "url": "/2026/02/28/%E7%AD%89%E5%91%A8%E5%AE%9A%E7%90%86/",
+    "date": "2026-02-28",
     "publication": ""
   }
 ]
