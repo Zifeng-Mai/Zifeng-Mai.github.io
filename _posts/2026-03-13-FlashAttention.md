@@ -13,7 +13,15 @@ tags:
     - Transformer
 ---
 
-
+|                |              FA-v1               |       FA-v2        |       FA-v3        |           FA-v4           |
+| -------------- | :------------------------------: | :----------------: | :----------------: | :-----------------------: |
+| **目标硬件**   |              Ampere              |   Ampere/Hopper    |       Hopper       |         Blackwell         |
+| **核心创新**   | Tiled Attention + Online Softmax | 序列并行 + Split-Q | Warp 专业化 + 异步 | 5 级流水线 + 软件模拟指数 |
+| **并行策略**   |            Batch/Head            |      Sequence      |     Warp-Group     |     Warp-Specialized      |
+| **精度支持**   |            FP16/BF16             |     FP16/BF16      |   FP8/FP16/BF16    |       FP8/FP16/BF16       |
+| **流水线级数** |                1                 |         1          |         2          |             5             |
+| **编程模型**   |               CUDA               |        CUDA        |    CUDA + WGMMA    |          CuTeDSL          |
+| **性能提升**   |   2~4× over vanilla attention    |   2× over FA-v1    |   2× over FA-v2    |     1.5~3× over FA-v3     |
 
 ## TL;DR
 
@@ -271,13 +279,13 @@ FlashAttention-v1 在 A100 上能够达到30-50%的硬件利用率。
 
 ### 2.2. FA-v1 的瓶颈分析
 
-<span style="color: dodgerblue;"> <strong> 瓶颈 1：并行度不足（低占用率） </strong> </span>
+<span style="color: red;"> <strong> 瓶颈 1：并行度不足（低占用率） </strong> </span>
 
 FA1 并行策略是按 batch 和 head 并行，Thread Blocks 的数量为 batch_size × n_heads
 
 在长上下文场景中，为了避免OOM，会将 batch_size 和 n_heads 都设置得比较小。此时 Thread Blocks 的数量很少，GPU 中有大量的 SM 闲置。
 
-<span style="color: dodgerblue;"> <strong> 瓶颈 2：非矩阵乘法开销 </strong> </span>
+<span style="color: red;"> <strong> 瓶颈 2：非矩阵乘法开销 </strong> </span>
 
 - GEMM 操作放在专用的 Tensor Core 上进行，吞吐量非常大（A100 上能达到312 TFLOPs/s）
 - 非 GEMM 操作（exp、除法）需要在 SFU (Special Function Unit) 上进行，吞吐量较少（A100 上仅有19.5 TFLOPs/s）
@@ -378,15 +386,15 @@ A100 利用率约 73%，接近 GEMM 的 80-90%。
 
 尽管 FA-v2 在 A100 上表现良好，但在 H100 上仅达到 35% 利用率。
 
-<span style="color: dodgerblue;"> <strong> 瓶颈 1：同步执行模型 </strong> </span>
+<span style="color: red;"> <strong> 瓶颈 1：同步执行模型 </strong> </span>
 
 FA-v2 使用 Ampere 架构下的 mma.sync 指令，未利用 Hopper 的异步 WGMMA 指令。
 
-<span style="color: dodgerblue;"> <strong> 瓶颈 2：无生产者 - 消费者重叠 </strong> </span>
+<span style="color: red;"> <strong> 瓶颈 2：无生产者 - 消费者重叠 </strong> </span>
 
 FA-v2 中数据加载和计算串行执行
 
-<span style="color: dodgerblue;"> <strong> 瓶颈 3：非 GEMM 操作瓶颈 </strong> </span>
+<span style="color: red;"> <strong> 瓶颈 3：非 GEMM 操作瓶颈 </strong> </span>
 
 H100 中 Tensor Core 达到 989 TFLOPs，而 SFU 仅有 3.9 TFLOPs，二者的差距进一步拉大（256× 差距）
 
