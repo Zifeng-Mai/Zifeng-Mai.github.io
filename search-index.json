@@ -417,25 +417,10 @@
     "tags": [
       "FlashAttention",
       "GPU Optimization",
-      "Transformer"
+      "LLM"
     ],
     "preview": "本文系统介绍了 FlashAttention 系列工作的技术演进，从 FlashAttention 1 的 IO-aware 设计，到 FlashAttention 2 的并行化优化，再到后续版本针对 H100 和 Blackwell 架构的硬件适配。通过本文，读者可以理解高效 Attention 实现的核心思想，以及硬件感知算法设计的重要性。",
     "url": "/2026/03/13/FlashAttention/",
-    "date": "2026-03-13",
-    "publication": ""
-  },
-  {
-    "title": "NVIDIA Nemotron 3 Super 技术解读",
-    "subtitle": "面向智能体推理的开源混合 Mamba-Transformer MoE 模型",
-    "tags": [
-      "NVIDIA",
-      "Nemotron",
-      "Mixture of Experts",
-      "AI Agents",
-      "Large Language Models"
-    ],
-    "preview": "NVIDIA 正式发布了 Nemotron 3 Super，这是一个专为 AI 智能体设计的开源大模型。本文详细解读其架构创新、训练方法和性能表现，包括 Latent MoE、多 Token 预测、混合 Mamba-Transformer 骨干等核心技术。模型完全开源，权重、数据集和训练配方全部公开。",
-    "url": "/2026/03/13/Nemotron_3_Super/",
     "date": "2026-03-13",
     "publication": ""
   },
@@ -465,6 +450,19 @@
     "preview": "本文总结了字节推荐团队的两篇重要工作：RankMixer 和 TokenMixer-Large。两篇工作都聚焦于硬件感知的推荐模型设计，通过替换自注意力、优化并行策略、引入稀疏 MoE 等技术，在保持推理延迟不变的情况下将模型规模扩展 70 倍，MFU 从 4.5% 提升至 45%，并在抖音信息流和广告场景取得显著线上收益。",
     "url": "/2026/03/13/%E5%AD%97%E8%8A%82%E6%8E%A8%E8%8D%90%E5%A4%A7%E6%A8%A1%E5%9E%8B%E5%AE%9E%E8%B7%B5/",
     "date": "2026-03-13",
+    "publication": "Arxiv"
+  },
+  {
+    "title": "NVIDIA Nemotron 3 Super 技术解读",
+    "subtitle": "Nemotron 3 Super: Open, Efficient Mixture-of-Experts Hybrid Mamba-Transformer Model for Agentic Reasoning",
+    "tags": [
+      "NVIDIA",
+      "Nemotron",
+      "LLM"
+    ],
+    "preview": "NVIDIA 正式发布了 Nemotron 3 Super，这是一个专为 AI 智能体设计的开源大模型。工作的主要创新包括：混合 Mamba-Transformer 架构、Latent MoE、多 token 预测以及原生使用 NVFP4 预训练等。这种设计在保持高效推理的同时，实现了强大的推理和编码能力。",
+    "url": "/2026/03/24/Nemotron3/",
+    "date": "2026-03-24",
     "publication": "Arxiv"
   }
 ]

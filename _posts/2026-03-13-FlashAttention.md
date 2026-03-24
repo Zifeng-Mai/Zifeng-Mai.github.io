@@ -6,11 +6,11 @@ author:     Zifeng Mai
 header-img: img/arashiyama.jpg
 preview:    本文系统介绍了 FlashAttention 系列工作的技术演进，从 FlashAttention 1 的 IO-aware 设计，到 FlashAttention 2 的并行化优化，再到后续版本针对 H100 和 Blackwell 架构的硬件适配。通过本文，读者可以理解高效 Attention 实现的核心思想，以及硬件感知算法设计的重要性。
 catalog: true
-series: Transformer
+series: LLM
 tags:
     - FlashAttention
     - GPU Optimization
-    - Transformer
+    - LLM
 ---
 
 |                |              FA-v1               |       FA-v2        |       FA-v3        |           FA-v4           |
