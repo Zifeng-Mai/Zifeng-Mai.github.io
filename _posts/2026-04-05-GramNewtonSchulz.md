@@ -36,7 +36,7 @@ tags:
 
 ### 1.1. Muon 优化器更新规则
 
-在第 $k$ 步训练时，令 $\mathbf{W}_k \in \mathbb{R}^{n \times m}$ 为权重矩阵，$\mathbf{G}_k=\nabla_{\mathbf{W}_k}\mathcal{J}$ 是 $\mathbf{W}_k$ 的梯度。Muon 的更新规则为：
+在第 $k$ 步训练时，令 $\mathbf{W}_k \in \mathbb{R}^{n \times m}$ 为权重矩阵，$\mathbf{G}_k$ 是 $\mathbf{W}_k$ 的梯度。Muon 的更新规则为：
 
 $$
 \begin{equation}
