@@ -171,10 +171,18 @@ $$
 1. $\mathbf{X} \gets \mathbf{X} / (\Vert\mathbf{X}\Vert_{\mathsf{F}} + \epsilon)$（将奇异值归一化到 $[0, 1]$，$\epsilon = 10^{-7}$）
 2. $\mathbf{R}_0 = \mathbf{X} \mathbf{X}^\top$
 3. $\mathbf{Q}_0 = \mathbf{I}$
-4. 对于 $t = 1, \ldots, 5$：
-   - $\mathbf{Z}_t \gets a_t\mathbf{I} + b_t \mathbf{R}_{t-1} + c_t \mathbf{R}_{t-1}^2$  （应用 $h_t(\mathbf{R}_{t-1})$）
-   - $\mathbf{Q}_t \gets \mathbf{Q}_{t-1} \mathbf{Z}_t$
-   - $\mathbf{R}_t \gets \mathbf{Z}_t \mathbf{R}_{t-1} \mathbf{Z}_t$
+4. 对于 $t = 1, \ldots, 5$ 按照下面的公式迭代
+   
+   $$
+   \begin{equation}
+    \begin{aligned}
+   \mathbf{Z}_t &\gets a_t\mathbf{I} + b_t \mathbf{R}_{t-1} + c_t \mathbf{R}_{t-1}^2\\
+   \mathbf{Q}_t &\gets \mathbf{Q}_{t-1} \mathbf{Z}_t\\
+   \mathbf{R}_t &\gets \mathbf{Z}_t \mathbf{R}_{t-1} \mathbf{Z}_t
+    \end{aligned}
+   \end{equation}
+   $$
+
 5. 返回 $\mathbf{Q}_5 \mathbf{X}$
 
 ### 2.4. 计算复杂度分析
@@ -182,14 +190,14 @@ $$
 下面分析 Naive Gram Newton-Schulz 的 FLOPs 数量级。每次迭代包含四次矩阵乘法（使用对称 GEMM 核）：
 - $\mathbf{R}_{t-1}^2$：$n^3$ FLOPs
 - $\mathbf{Q}_{t-1} \mathbf{Z}_t$：$n^3$ FLOPs
-- $\mathbf{Z}_{t}\mathbf{R}_{t-1}\mathbf{Z}_{t}$：$2n^3$ FLOPs
+- $\mathbf{Z}_ {t} \mathbf{R}_ {t-1} \mathbf{Z}_ {t}$：$2n^3$ FLOPs
 
 初始化和输出步骤：
 - $\mathbf{X}\mathbf{X}^\top$：$mn^2$ FLOPs
 - $\mathbf{Q}_5 \mathbf{X}$：$2mn^2$ FLOPs（非对称）
 
 下面的计算量可以优化：
-- $\mathbf{Q}_1 = \mathbf{Q}_{0}\mathbf{Z}_1=\mathbf{Z}_1$ 不需要计算：节省 $n^3$ FLOPs
+- $\mathbf{Q}_ 1 = \mathbf{Q}_ {0}\mathbf{Z}_ 1=\mathbf{Z}_1$ 不需要计算：节省 $n^3$ FLOPs
 - $\mathbf{R}_5$ 不需要计算：节省 $2n^3$ FLOPs
 
 因此 Naive Gram Newton-Schulz 的总 FLOPs 为：
@@ -238,7 +246,7 @@ $$
 
 ### 3.2. 重启策略（Restarting）
 
-为了缓解 Naive Gram Newton-Schulz 在低精度下的数值稳定性问题，作者提出了重启策略。重启的核心思想在于不直接计算 $\mathbf{X}_T$，而是运行少量迭代（如 5 步）得到 $\mathbf{X}_5$，然后在 $\mathbf{X}_5$ 上再次应用 Gram Newton-Schulz 计算 $\mathbf{X}_{10}$，依此类推。
+为了缓解 Naive Gram Newton-Schulz 在低精度下的数值稳定性问题，作者提出了重启策略。重启的核心思想在于不直接计算 $\mathbf{X}_ T$，而是运行少量迭代（如 5 步）得到 $\mathbf{X}_ 5$，然后在 $\mathbf{X}_ 5$ 上再次应用 Gram Newton-Schulz 计算 $\mathbf{X}_ {10}$，依此类推。
 
 每次重启时，由于重新计算了 Gram 矩阵 $\mathbf{R} = \mathbf{X}\mathbf{X}^\top$，这消除了之前积累的大幅度负特征值。另外，由于 $\mathbf{Q}_t$ 在每次重启时重置为单位矩阵，其特征值始终有界，因此 $\mathbf{X}_t = \mathbf{Q}_t \mathbf{X}$ 的特征值也能保持有界。
 

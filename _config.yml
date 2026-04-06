@@ -58,6 +58,10 @@ markdown: kramdown
 highlighter: rouge
 kramdown:
   input: GFM                            # use Github Flavored Markdown !important
+  math_engine: mathjax                  # use MathJax for math rendering
+  math_engine_opts:
+    preview: true
+    preview_as_code: true
 
 
 
