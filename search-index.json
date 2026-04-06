@@ -425,20 +425,6 @@
     "publication": ""
   },
   {
-    "title": "信息论 (1)",
-    "subtitle": "互信息及其上下界估计",
-    "tags": [
-      "Information Theory",
-      "Mutual Information",
-      "Variational Bounds",
-      "Representation Learning"
-    ],
-    "preview": "互信息是信息论中的核心概念，衡量两个随机变量之间的依赖关系。本文系统介绍了互信息的定义、性质、以及在实际应用中的上下界估计方法，包括 variational bound、contrastive bound、以及基于神经网络的估计方法。通过本文，读者可以理解互信息在现代机器学习中的应用，特别是表示学习、信息瓶颈等方向。",
-    "url": "/2026/03/13/%E4%BA%92%E4%BF%A1%E6%81%AF/",
-    "date": "2026-03-13",
-    "publication": ""
-  },
-  {
     "title": "字节推荐系统大模型实践",
     "subtitle": "RankMixer 与 TokenMixer-Large：硬件感知的推荐模型架构演进",
     "tags": [
@@ -464,5 +450,58 @@
     "url": "/2026/03/24/Nemotron3/",
     "date": "2026-03-24",
     "publication": "Arxiv"
+  },
+  {
+    "title": "互信息",
+    "subtitle": "互信息、上下界估计与表征学习：从定义、变分界到应用",
+    "tags": [
+      "Information Theory",
+      "Mutual Information",
+      "Variational Bounds",
+      "Representation Learning"
+    ],
+    "preview": "互信息是信息论中的核心概念，衡量两个随机变量之间的依赖关系。本文系统介绍了互信息的定义、性质、以及在实际应用中的上下界估计方法，包括 variational bound、contrastive bound、以及基于神经网络的估计方法。通过本文，读者可以理解互信息在现代机器学习中的应用，特别是表示学习、信息瓶颈等方向。",
+    "url": "/2026/03/25/%E4%BA%92%E4%BF%A1%E6%81%AF/",
+    "date": "2026-03-25",
+    "publication": ""
+  },
+  {
+    "title": "实数集的完备性及其等价表述",
+    "subtitle": "七个经典定理的严格证明",
+    "tags": [
+      "Real Analysis",
+      "Completeness"
+    ],
+    "preview": "本文档系统阐述实数集 $\\mathbb{R}$ 的完备性概念，列出七个经典等价表述（戴德金分割、确界原理、单调有界原理、区间套定理、有限覆盖定理、柯西收敛准则、聚点定理），并给出这些表述两两等价的严格证明。实数系的完备性是数学分析的理论基石，它区分了实数系与有理数系的本质差异。",
+    "url": "/2026/03/31/%E5%AE%9E%E6%95%B0%E9%9B%86%E7%9A%84%E5%AE%8C%E5%A4%87%E6%80%A7/",
+    "date": "2026-03-31",
+    "publication": ""
+  },
+  {
+    "title": "个性化搜索中的知识-动作对齐",
+    "subtitle": "KARMA: Knowledge-Action Regularized Multimodal Alignment for Personalized Search at Taobao",
+    "tags": [
+      "Recommender System",
+      "Multimodal Alignment"
+    ],
+    "preview": "使用LLM对个性化搜索进行语义增强时会遇到Knowledge-Action Gap问题。LLM 预训练获得的丰富语义知识与个性化任务中的判别性目标存在内在冲突。淘宝团队提出了KARMA，将语义重建作为训练时的正则化器，让表征不仅能与用户行为对齐，还能保持语义可解码性。",
+    "url": "/2026/04/01/KARMA/",
+    "date": "2026-04-01",
+    "publication": "Arxiv"
+  },
+  {
+    "title": "优化器 (3)",
+    "subtitle": "Gram Newton-Schulz",
+    "tags": [
+      "Optimizer",
+      "Newton-Schulz",
+      "Matrix Decomposition",
+      "GPU Kernel",
+      "LLM"
+    ],
+    "preview": "本文介绍了 Gram Newton-Schulz 算法，这是 Muon 优化器中 Newton-Schulz 正交化过程的高效变体。通过在 Gram 矩阵上迭代而非原矩阵，Gram Newton-Schulz 显著减少了 FLOPs 和运行时间。本文详细推导了算法的数学原理，分析了数值稳定性问题，并给出了完整的理论证明。此外，本文结合 DAO Lab 的开源实现，介绍了 PyTorch 代码细节、对称 GEMM 核优化以及重启位置自动调优工具。",
+    "url": "/2026/04/05/GramNewtonSchulz/",
+    "date": "2026-04-05",
+    "publication": ""
   }
 ]
