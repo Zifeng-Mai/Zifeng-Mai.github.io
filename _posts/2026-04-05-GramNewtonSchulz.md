@@ -7,14 +7,14 @@ github_repo: https://github.com/Dao-AILab/gram-newton-schulz/
 date:       2026-04-05
 author:     Zifeng Mai
 header-img: img/fuji1.jpg
-preview:    本文介绍了 Gram Newton-Schulz 算法，这是 Muon 优化器中 Newton-Schulz 正交化过程的高效变体。通过在 Gram 矩阵上迭代而非原矩阵，Gram Newton-Schulz 显著减少了 FLOPs 和运行时间。本文详细推导了算法的数学原理，分析了数值稳定性问题，并给出了完整的理论证明。此外，本文结合 DAO Lab 的开源实现，介绍了 PyTorch 代码细节、对称 GEMM 核优化以及重启位置自动调优工具。
+preview:    本文介绍了 Gram Newton-Schulz 算法，这是 Muon 优化器中 Newton-Schulz 正交化过程的高效变体。通过在 Gram 矩阵上迭代而非原矩阵，Gram Newton-Schulz 显著减少了 FLOPs 和运行时间。本文详细推导了算法的数学原理，分析了数值稳定性问题，并给出了完整的理论证明。
 catalog: true
 series: 优化器
 tags:
     - Optimizer
+    - Muon
     - Newton-Schulz
-    - Matrix Decomposition
-    - GPU Kernel
+    - Optimization Theory
     - LLM
 ---
 
