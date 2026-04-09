@@ -1,9 +1,8 @@
 ---
-layout:     paper
+layout:     post
 title:      生成式推荐系统中的预测解码加速
 subtitle:   "Speculative Decoding for Generative Recommendation Systems"
 author:     Zifeng Mai
-publication: Blog
 date:       2026-04-07
 header-img: img/kamogawa.jpg
 preview:    系统介绍生成式推荐系统中预测解码（Speculative Decoding）技术的最新进展，涵盖 AtSpeed (ICLR'25)、LASER (SIGIR'25)、NEZHA (WWW'26) 和 SpecGR (AAAI'26) 四项代表性工作。
