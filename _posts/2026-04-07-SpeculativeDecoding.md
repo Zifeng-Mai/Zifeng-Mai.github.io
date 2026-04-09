@@ -1,7 +1,6 @@
 ---
 layout:     post
 title:      生成式推荐系统中的预测解码加速
-subtitle:   "Speculative Decoding for Generative Recommendation Systems"
 author:     Zifeng Mai
 date:       2026-04-07
 header-img: img/kamogawa.jpg
