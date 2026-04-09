@@ -466,18 +466,6 @@
     "publication": ""
   },
   {
-    "title": "实数集的完备性",
-    "subtitle": "七个等价表述的证明",
-    "tags": [
-      "Real Analysis",
-      "Completeness"
-    ],
-    "preview": "本文档系统阐述实数集的完备性概念，列出七个经典等价表述：戴德金分割、确界原理、单调有界原理、区间套定理、有限覆盖定理、柯西收敛准则、聚点定理，并给出这些表述两两等价的严格证明。实数系的完备性是数学分析的理论基石，它区分了实数系与有理数系的本质差异。",
-    "url": "/2026/03/31/%E5%AE%9E%E6%95%B0%E9%9B%86%E7%9A%84%E5%AE%8C%E5%A4%87%E6%80%A7/",
-    "date": "2026-03-31",
-    "publication": ""
-  },
-  {
     "title": "个性化搜索中的知识-动作对齐",
     "subtitle": "KARMA: Knowledge-Action Regularized Multimodal Alignment for Personalized Search at Taobao",
     "tags": [
@@ -506,7 +494,7 @@
   },
   {
     "title": "生成式推荐系统中的预测解码加速",
-    "subtitle": "Speculative Decoding for Generative Recommendation Systems",
+    "subtitle": "",
     "tags": [
       "Recommender System",
       "Generative Recommendation",
@@ -516,6 +504,18 @@
     "preview": "系统介绍生成式推荐系统中预测解码（Speculative Decoding）技术的最新进展，涵盖 AtSpeed (ICLR'25)、LASER (SIGIR'25)、NEZHA (WWW'26) 和 SpecGR (AAAI'26) 四项代表性工作。",
     "url": "/2026/04/07/SpeculativeDecoding/",
     "date": "2026-04-07",
-    "publication": "Blog"
+    "publication": ""
+  },
+  {
+    "title": "实数集的完备性",
+    "subtitle": "七个等价表述及其证明",
+    "tags": [
+      "Real Analysis",
+      "Completeness"
+    ],
+    "preview": "本文档系统阐述实数集的完备性概念，列出七个经典等价表述：戴德金分割、确界原理、单调有界原理、区间套定理、有限覆盖定理、柯西收敛准则、聚点定理，并给出这些表述两两等价的严格证明。实数系的完备性是数学分析的理论基石，它区分了实数系与有理数系的本质差异。",
+    "url": "/2026/04/09/%E5%AE%9E%E6%95%B0%E9%9B%86%E7%9A%84%E5%AE%8C%E5%A4%87%E6%80%A7/",
+    "date": "2026-04-09",
+    "publication": ""
   }
 ]
