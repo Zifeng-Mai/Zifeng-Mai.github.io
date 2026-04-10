@@ -517,5 +517,18 @@
     "url": "/2026/04/09/%E5%AE%9E%E6%95%B0%E9%9B%86%E7%9A%84%E5%AE%8C%E5%A4%87%E6%80%A7/",
     "date": "2026-04-09",
     "publication": ""
+  },
+  {
+    "title": "随机过程(8)",
+    "subtitle": "高斯过程(3): 高斯与非线性",
+    "tags": [
+      "Stochastic Process",
+      "Price Theorem",
+      "Characteristic Function"
+    ],
+    "preview": "本文是张颢老师随机过程课程笔记的第八篇。在本文中，介绍了高斯过程经过一些非线性系统后的性质，着重分析了其相关函数。我们还介绍并证明了Price定理，这是处理高斯过程经过非线性系统后的相关函数的一个重要工具。",
+    "url": "/2026/04/10/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B(8)/",
+    "date": "2026-04-10",
+    "publication": ""
   }
 ]
