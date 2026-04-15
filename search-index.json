@@ -371,21 +371,6 @@
     "publication": ""
   },
   {
-    "title": "随机过程(7)",
-    "subtitle": "习题课：高斯过程的应用",
-    "tags": [
-      "Stochastic Process",
-      "Gaussian Process",
-      "Denoising Diffusion Probabilistic Model",
-      "Linear Gaussian System",
-      "Conditional Gaussian Distribution"
-    ],
-    "preview": "在本文中，我们主要介绍了高斯过程的一些应用，作为习题课来增强读者对于高斯分布的理解。其中的内容包括：DDPM、线性高斯系统、条件高斯分布的一些计算等。",
-    "url": "/2026/02/25/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B(7)/",
-    "date": "2026-02-25",
-    "publication": ""
-  },
-  {
     "title": "等周不等式",
     "subtitle": "周长为定值时，面积最大的封闭图形是圆",
     "tags": [
@@ -519,16 +504,43 @@
     "publication": ""
   },
   {
-    "title": "随机过程(8)",
+    "title": "随机过程(7)",
     "subtitle": "高斯过程(3): 高斯与非线性",
     "tags": [
       "Stochastic Process",
       "Price Theorem",
       "Characteristic Function"
     ],
-    "preview": "本文是张颢老师随机过程课程笔记的第八篇。在本文中，介绍了高斯过程经过一些非线性系统后的性质，着重分析了其相关函数。我们还介绍并证明了Price定理，这是处理高斯过程经过非线性系统后的相关函数的一个重要工具。",
-    "url": "/2026/04/10/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B(8)/",
+    "preview": "本文是张颢老师随机过程课程笔记的第七篇。在本文中，介绍了高斯过程经过一些非线性系统后的性质，着重分析了其相关函数。我们还介绍并证明了Price定理，这是处理高斯过程经过非线性系统后的相关函数的一个重要工具。",
+    "url": "/2026/04/10/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B(7)/",
     "date": "2026-04-10",
+    "publication": ""
+  },
+  {
+    "title": "随机过程(8)",
+    "subtitle": "高斯过程的应用",
+    "tags": [
+      "Stochastic Process",
+      "Gaussian Process",
+      "Denoising Diffusion Probabilistic Model",
+      "Black-Scholes Equation",
+      "Ito Integral"
+    ],
+    "preview": "在本文中，我们主要介绍了高斯过程的一些应用来增强读者对于高斯分布的理解。其中的内容包括：DDPM、线性高斯系统、条件高斯分布的一些计算和高斯过程在经济学中的应用。",
+    "url": "/2026/04/13/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B(8)/",
+    "date": "2026-04-13",
+    "publication": ""
+  },
+  {
+    "title": "随机过程(9)",
+    "subtitle": "泊松过程(1): 泊松分布",
+    "tags": [
+      "Stochastic Process",
+      "Poisson Process"
+    ],
+    "preview": "本文是张颢老师随机过程课程笔记的第九篇。在本文中，我们介绍了离散状态随机过程的代表：泊松过尘。我们从独立增量和平稳增量两个条件推导出了泊松分布的概率分布函数，介绍了矩母函数等一系列数学工具。",
+    "url": "/2026/04/15/%E9%9A%8F%E6%9C%BA%E8%BF%87%E7%A8%8B(9)/",
+    "date": "2026-04-15",
     "publication": ""
   }
 ]
